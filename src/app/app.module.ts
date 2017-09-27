@@ -21,12 +21,17 @@ import { DashboardComponent } from './dashboard.component';
     FormsModule,
     RouterModule.forRoot([
       {
-        path: 'heroes',
-        component: HeroesComponent
+        path: '',
+        redirectTo: '/dashboard',
+        pathMatch: 'full'
       },
       {
         path: 'dashboard',
         component: DashboardComponent
+      },
+      {
+        path: 'heroes',
+        component: HeroesComponent
       }
     ])
   ],
